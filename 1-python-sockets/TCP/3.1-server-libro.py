@@ -21,7 +21,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as TCPServerSocket:
             print ("Recibido,", data.decode(),"   de ", Client_addr)
             print (len(data))
             filesize+=len(data)
-            if data = "EOT"
-            break
+           if not data:
+                break
         print("Terminé")
 

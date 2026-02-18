@@ -15,7 +15,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as  ServerAccept:
         print("Conectado a", Client_addr)
         while True:
             print("Esperando a recibir datos... ")
-            data = socket.recv(buffer_size)
+            data = socket_conn.recv(buffer_size)
             print ("Recibido,", data,"   de ", Client_addr)
             print (len(data))
             if not data:
