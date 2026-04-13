@@ -9,7 +9,7 @@ def connectServer (host:str, bufferSize: int):
     socketServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     socketServer.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, bufferSize)
     try:
-        socketServer.bind (host, port)
+        socketServer.bind ((host, port))
         socketServer.listen (5)
         print (f"Servidor TCP escuchando en {host}:{port}")
         print (f"Buffer del sistema configurado a : {bufferSize} bytes")
