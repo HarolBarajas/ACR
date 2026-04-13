@@ -4,7 +4,7 @@ import time
 import struct
 import random
 port = 5000
-document = "../libros/hamlet.txt"
+document = "hamlet.txt"
 file_size = os.path.getsize(document)
 filename = os.path.basename(document)
 sizename = filename.encode ("utf-8")
