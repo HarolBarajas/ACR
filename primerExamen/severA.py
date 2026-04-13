@@ -3,8 +3,6 @@ import os
 import time
 import struct
 
-from practica.serverTCP import paquetes_recibidos
-
 port = 5000
 
 def connectServer (host:str, bufferSize: int):
