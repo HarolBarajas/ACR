@@ -14,7 +14,7 @@ def iniciar_servidor():
     servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     servidor.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     servidor.bind((HOST, PORT))
-    servidor.listen(100) #para poder escuchar las 100 peticiones casi simultaneas
+    servidor.listen(100)
     print(f"Servidor escuchando en {HOST}:{PORT}")
 
     entradas = [servidor]
@@ -38,7 +38,6 @@ def iniciar_servidor():
                         sock.close()
                     else:
                         time.sleep(0.05)
-
                         try:
                             sock.sendall(b"OK\n")
                         except:
@@ -48,7 +47,6 @@ def iniciar_servidor():
         print("\nServidor detenido.")
     finally:
         servidor.close()
-
 
 if __name__ == "__main__":
     iniciar_servidor()
