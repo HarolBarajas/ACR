@@ -12,7 +12,6 @@ def cliente_individual(client_id, num_peticiones, HOST, PORT):
             data = b'SENSOR_DATA' + b'\x00' * (PACKET_SIZE - 11)
             client_socket.sendall(data)
 
-            # 4. Cerrar inmediatamente
             client_socket.close()
 
         except Exception as e:
@@ -20,7 +19,7 @@ def cliente_individual(client_id, num_peticiones, HOST, PORT):
 
 
 if __name__ == "__main__":
-    HOST = '127.0.0.1'  # ← Cambia solo si el servidor está en otra máquina
+    HOST = 'localhost'  # ← Cambia solo si el servidor está en otra máquina
     PORT = 5000
 
     print("[CLIENTE Fase A] Configuración dinámica\n")
