@@ -1,9 +1,12 @@
+#INTEGRANTES
+#Flores Aguilera Alexei
+#Barajas Pacheco Harol Fabian
 import socket
 import random
 import time
 
 if __name__ == "__main__":
-    host = '127.0.0.1'  # cambia solo si el servidor está en otra máquina
+    host = '127.0.0.1'
     puerto = 6000
     num_paquetes = 500
 
@@ -12,7 +15,7 @@ if __name__ == "__main__":
     inicio = time.time()
 
     for i in range(1, num_paquetes + 1):
-        velocidad = random.uniform(0, 100)  # valor aleatorio de velocidad
+        velocidad = random.uniform(0, 100)
         mensaje = f"{i:04d}:{velocidad:.2f}".encode('utf-8')
         sock.sendto(mensaje, (host, puerto))
 
