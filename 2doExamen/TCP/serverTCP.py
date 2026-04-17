@@ -8,10 +8,6 @@ WORKER_POOL_SIZE = 5
 
 
 def worker_task(worker_id: int, client_queue: queue.Queue):
-    """
-    Función de ejecución para cada hilo trabajador (Worker).
-    Procesa las conexiones entrantes extraídas de la cola concurrente.
-    """
     print(f"[Worker-{worker_id}] Inicializado y en espera de conexiones.")
 
     while True:
